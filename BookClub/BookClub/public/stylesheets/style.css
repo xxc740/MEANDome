@@ -1,0 +1,19 @@
+﻿body {
+ font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: gainsboro;
+}
+a {
+  color: #00b7ff;
+}
+.navbar-default {
+  background-color: #444;
+  border-color: black;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color:#222;
+}
+.navbar-default .navbar-nav > li > a{
+    color:  #ccc;
+}
+a.navbar-brand{color: #fff !important}
