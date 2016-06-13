@@ -21,7 +21,7 @@
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
-    <StartWebBrowser>true</StartWebBrowser>
+    <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,12 +34,12 @@
     <Compile Include="app_server\controllers\home.js" />
     <Compile Include="app_server\routes\index.js" />
     <Compile Include="app_server\routes\users.js" />
-    <Compile Include="bin\www" />
     <Compile Include="public\bootstrap\js\bootstrap.js" />
     <Compile Include="public\bootstrap\js\bootstrap.min.js" />
     <Compile Include="public\bootstrap\js\npm.js" />
     <Content Include="app_server\views\about.jade" />
     <Content Include="app_server\views\books.jade" />
+    <Content Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\bootstrap\css\bootstrap-theme.css" />
     <Content Include="public\bootstrap\css\bootstrap-theme.css.map" />
@@ -53,7 +53,6 @@
     <Content Include="public\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="public\stylesheets\style.css" />
-    <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
     <Content Include="app_server\views\index.jade" />
     <Content Include="app_server\views\layout.jade" />
