@@ -1,0 +1,25 @@
+﻿extends layout
+
+include partial/star
+
+block content
+  .row
+   .col-md-9.page.bookdetail
+     h3=book.title
+     .row
+      .col-md-2
+           img(src='#{book.img}')
+      .col-md-10
+            p=book.info
+            p
+              +outputStar(book.rating)
+            p.tags
+             each tag in book.tags
+              span=tag
+            p ISBN:#{book.ISBN}
+      h3 内容简介
+      p.brief=book.brief
+   .col-md-3
+     .userinfo
+      p xcode
+       

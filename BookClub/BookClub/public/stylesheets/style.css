@@ -24,3 +24,98 @@ a {
 a.navbar-brand {
   color: #fff !important;
 }
+#bodycontent {
+  margin-top: 80px;
+}
+.userinfo,
+.page {
+  border-radius: 3px;
+  background: #fff;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.booklist {
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #008b8b;
+  padding-bottom: 20px;
+}
+.booklist .col-md-2 {
+  padding: 0;
+}
+.booklist .col-md-2 img {
+  box-shadow: 0 0 5px;
+}
+.booklist .glyphicon-star,
+.bookdetail .glyphicon-star {
+  color: #ffd700;
+}
+.booklist .glyphicon-star-empty,
+.bookdetail .glyphicon-star-empty {
+  color: #808080;
+}
+.tags span {
+  margin: 0 3px;
+  color: #808080;
+  cursor: pointer;
+}
+/*book detail*/
+.bookdetail h3 {
+  text-indent: 10px;
+  margin: 20px 0;
+  border-bottom: 1px #dcdcdc solid;
+  padding: 0 0 10px;
+}
+.brief {
+  padding-left: 10px;
+  line-height: 25px;
+}
+.topiclist {
+  margin: 20px 0;
+  font-size: medium;
+}
+.topiclist span {
+  margin-right: 10px;
+}
+.topiclist span.count {
+  width: 50px;
+  display: inline-block;
+  color: #808080;
+}
+.topiclist a {
+  color: #333;
+}
+.topiclist a:hover {
+  text-decoration: none;
+  color: #00b7ff;
+}
+.topiclist .pull-right {
+  font-size: small;
+  color: #808080;
+}
+.topiclist .label {
+  font-size: small;
+}
+.topiclist .author {
+  color: #808080;
+  display: inline-block;
+  margin-right: 10px;
+}
+.topictype a {
+  font-size: medium;
+  margin-right: 10px;
+  display: inline-block;
+}
+.topiclist img {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+@media (min-width: 1700px) {
+  .container {
+    width: 1400px;
+  }
+}
+footer {
+  margin-top: 50px;
+}
