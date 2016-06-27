@@ -32,6 +32,7 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="app_server\controllers\home.js" />
+    <Compile Include="app_server\models\db.js" />
     <Compile Include="app_server\routes\index.js" />
     <Compile Include="app_server\routes\users.js" />
     <Compile Include="public\bootstrap\js\bootstrap.js" />
@@ -61,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app_server\controllers\" />
+    <Folder Include="app_server\models\" />
     <Folder Include="app_server\views\partial\" />
     <Folder Include="bin\" />
     <Folder Include="app_server\" />
