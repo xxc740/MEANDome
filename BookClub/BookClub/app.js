@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 //var routes = require('./routes/index');
 //重新设置路由
 var routes = require('./app_server/routes/index');
+var routesApi = require('./app_api/routes/index');
 //var users = require('./routes/users');
 
 var app = express();
@@ -30,6 +31,7 @@ app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/api', routesApi);
 //app.use('/users', users);
 
 // catch 404 and forward to error handler

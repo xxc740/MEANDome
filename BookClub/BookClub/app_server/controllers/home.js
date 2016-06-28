@@ -1,4 +1,40 @@
-﻿module.exports.index = function(req, res) {
+﻿var db = require('../models/db.js');
+var mongoose = require('mongoose');
+var Bookmodel = mongoose.model('Book');
+var Topicmodel = mongoose.model('Topic');
+
+module.exports.init = function(req, res) {
+    mongoose.model('Book').find().exec(function(err, objs) {
+        if (err) {
+            res.render('error', {
+                message: err.message,
+                error: err
+            });
+        }
+        if (objs.length) {
+            for (var i = 0; i < books.length; i++) {
+                var taget = new Bookmodel(books[i]);
+                taget.save(function(err) {
+                    console.log(err);
+                });
+            }
+
+            for (var i = 0; i < topics.length; i++) {
+                var taget = new topicmodel(topics[i]);
+                console.log('topic create');
+                taget.save(function(err) {
+                    console.log(err);
+                });
+            }
+
+            res.send('初始化完成......');
+        }
+
+        res.render('books', { title: 'Books', books: objs });
+    });
+}
+
+module.exports.index = function (req, res) {
     res.render('index', { title: 'Index' });
 };
 
@@ -40,5 +76,62 @@ var books = [
         tags: ["文学", "感情"],
         brief: '如果用一句话来总结这本书，“我终于失去了你”比较适合。 一个多情的少男，在迷惘中挥霍自己的青春，即要追求纯情的真爱，又不能抗拒身体的诱惑，结果只能有一种结果，不会有其它的结果。',
         ISBN: 9787545911282
+    }
+];
+
+var topics = [
+    {
+        title: "书山有路第十一期：程序员修炼之道-第二章-注重实效的途径--第五天",
+        type: "读书",
+        visitedCount: 80,
+        commentCount: 2,
+        createdOn: '2016/5/15 21:32',
+        author: 'stoneniqiu',
+        img: 'http://upload.jianshu.io/users/upload_avatars/133630/d5370e672fd4.png?imageMogr/thumbnail/90x90/quality/100'
+    },
+    {
+        title: "《明朝那些事儿》之闲言散语",
+        type: "书评",
+        visitedCount: 180,
+        commentCount: 20,
+        createdOn: '2016/5/15 21:32',
+        author: '卡卡卡萨布兰卡 ',
+        img: 'http://upload.jianshu.io/users/upload_avatars/1675188/2d0810ccc03d.jpg?imageMogr/thumbnail/90x90/quality/100'
+    },
+    {
+        title: "有《程序员修炼之道》高清版吗？",
+        type: "求书",
+        visitedCount: 90,
+        commentCount: 1,
+        createdOn: '2016/5/15 21:32',
+        author: '吾不知 ',
+        img: 'http://upload.jianshu.io/users/upload_avatars/1125491/3910f3825f73.jpg?imageMogr/thumbnail/90x90/quality/100',
+    },
+    {
+        title: "《国富论》-读书笔记",
+        type: "书评",
+        visitedCount: 180,
+        commentCount: 20,
+        createdOn: '2016/5/15 21:32',
+        author: '寻海 '
+        ,img: 'http://upload.jianshu.io/users/upload_avatars/133630/d5370e672fd4.png?imageMogr/thumbnail/90x90/quality/100'
+    },
+    {
+        title: "《高效人士的七个习惯》读书笔记",
+        type: "书评",
+        visitedCount: 180,
+        commentCount: 20,
+        createdOn: '2016/5/15 21:32',
+        author: '书虫纪庆 ',
+        img: 'http://upload.jianshu.io/users/upload_avatars/1429280/454c495361f9.jpg?imageMogr/thumbnail/90x90/quality/100'
+    },
+    {
+        title: "《css揭秘》这本书如何",
+        type: "求索",
+        visitedCount: 58,
+        commentCount: 3,
+        createdOn: '2016/5/15 21:32',
+        author: 'Watery_D_Lotus ',
+        img: 'http://upload.jianshu.io/users/upload_avatars/1449533/a2d98762484a.jpg?imageMogr/thumbnail/90x90/quality/100'
     }
 ];
